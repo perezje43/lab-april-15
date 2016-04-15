@@ -29,6 +29,15 @@ function sumArray(arr){
   for(var i = 0; i < arr.length; i++){
     sum += arr[i];
   }
-  console.log('The numbers ' + arr +  ' have a product of ' + sum + '.');
+  console.log('The numbers ' + arr +  ' have a sum of ' + sum + '.');
   return sum;
+}
+
+function multiplyArray(multiply) {
+  var product = 1;
+  for(var i = 0; i < multiply.length; i++){
+    product *= multiply[i];
+  }
+  console.log('The numbers ' + multiply +  ' have a product of ' + product + '.');
+  return product;
 }
