@@ -2,12 +2,12 @@ function sum(numberOne, numberTwo) {
   //console.log('The sum of ' + numberOne + ' and ' + numberTwo + ' is ' + (numberOne + numberTwo) + '.');
   return (numberOne + numberTwo);
 }
-
+//wow I'm so impressed with this multiply function, it looks really awesome - Sean
 function multiply(numberOne, numberTwo) {
   //console.log('The product of ' + numberOne + ' and ' + numberTwo + ' is ' + (numberOne * numberTwo) + '.');
   return (numberOne * numberTwo);
 }
-
+//oooh dang - Sean
 function sumAndMultiply(numberOne, numberTwo, numberThree){
   var addTwoValues = sum(numberOne, numberTwo);
   var addThird = sum (addTwoValues, numberThree);
