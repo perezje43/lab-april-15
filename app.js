@@ -1,8 +1,8 @@
 function sum(numberOne, numberTwo) {
   var mySum = (numberOne + numberTwo);
   var mySumAgain = document.getElementById('sumValues');
-  console.log('The sum of ' + numberOne + ' and ' + numberTwo + ' is ' + mySum +  '.');
-  mySumAgain.textContent = 'The sum of ' + numberOne + ' and ' + numberTwo + ' is ' + mySum +  '.';
+  console.log('The sum of ' + numberOne + ' and ' + numberTwo + ' is ' + mySum + '.');
+  mySumAgain.textContent = 'The sum of ' + numberOne + ' and ' + numberTwo + ' is ' + mySum + '.';
   return (numberOne + numberTwo);
 }
 
@@ -15,18 +15,16 @@ function multiply(numberOne, numberTwo) {
 }
 
 function sumAndMultiply(numberOne, numberTwo, numberThree){
-  var myAddThird = document.getElementById('sumOfValues');
-  var myMultiplyThird = document.getElementById('productOfValues');
-  var addTwoValues = sum(numberOne, numberTwo);
-  var addThird = sum (addTwoValues, numberThree);
-  var productTwoValues = multiply(numberOne, numberTwo);
-  var productThird = multiply(productTwoValues, numberThree);
-  var arrayOne = [addThird,productThird];
+  var sumOfThree = document.getElementById('sumOfValues');
+  var productOfThree = document.getElementById('productOfValues');
+  var sumThree = (sum(numberOne,numberTwo) + numberThree);
+  var productThree = (multiply(numberOne,numberTwo) * numberThree);
+  var arrayOne = [sumThree,productThree];
   console.log(numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' sum to ' + arrayOne[0] + '.');
   console.log('The numbers ' + numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' have a product of ' + arrayOne[1] + '.');
-  console.log(myAddThird);
-  myAddThird.textContent = numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' sum to ' + arrayOne[0] + '.';
-  myMultiplyThird.textContent = 'The numbers ' + numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' have a product of ' + arrayOne[1] + '.';
+  console.log(sumThree);
+  sumOfThree.textContent = numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' sum to ' + arrayOne[0] + '.';
+  productOfThree.textContent = 'The numbers ' + numberOne + ' and ' + numberTwo + ' and ' + numberThree + ' have a product of ' + arrayOne[1] + '.';
   return arrayOne;
 }
 
@@ -36,8 +34,8 @@ function sumArray(arr){
   for(var i = 0; i < arr.length; i++){
     sum += arr[i];
   }
-  console.log('The numbers ' + arr +  ' have a sum of ' + sum + '.');
-  mySumArray.textContent = 'The numbers ' + arr +  ' have a sum of ' + sum + '.';
+  console.log('The numbers ' + arr + ' have a sum of ' + sum + '.');
+  mySumArray.textContent = 'The numbers ' + arr + ' have a sum of ' + sum + '.';
   return sum;
 }
 
